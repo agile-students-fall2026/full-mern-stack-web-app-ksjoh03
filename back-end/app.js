@@ -78,5 +78,13 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// route that hondles data for about us page
+app.get('/aboutus', async (req, res) => {
+  return res.json({
+    title: 'About Us',
+    imageurl: '/image.jpeg',
+    description: "I'm Keonsang, a junior at NYU studying computer science and psychology, with a minor in cybersecurity.\nI enjoy understanding both how technology works and how people think, and I like finding ways the two connect.\nOutside of class, I help teach an introductory programming course, I'm on the leadership board of a student tech club,\nand I've done research in a psychology lab. Going forward, I'm especially interested in cybersecurity\nand in work that makes technology safer and more useful for people."
+  })
+})
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
